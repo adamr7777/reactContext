@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import ThemeContext from "./ThemeContext"
+// import {ThemeContext} from "./ThemeContext"
 
 // class Button extends Component {
 //     render() {
@@ -15,15 +15,15 @@ import ThemeContext from "./ThemeContext"
 // export default Button
 
 
-export default function() {
-    return(
-        <ThemeContext.Consumer>
-            {((theme)=> (
-                <button className={`${theme}-theme`}>Switch Theme</button>
-            ))}
-        </ThemeContext.Consumer>
+// export default function() {
+//     return(
+//         <ThemeContext.Consumer>
+//             {((theme)=> (
+//                 <button className={`${theme.value}-theme`} onClick={theme.flipIt}>Switch Theme</button>
+//             ))}
+//         </ThemeContext.Consumer>
         
-    )
-}
+//     )
+// }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////

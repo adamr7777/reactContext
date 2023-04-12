@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 
-// import UserContext from "./UserContext"
-import ThemeContext from "./ThemeContext"
+import {UserContext} from "./UserContext"
+// import {ThemeContext} from "./ThemeContext"
 
 // class Header extends Component {
 //     static contextType = ThemeContext
@@ -18,20 +18,20 @@ import ThemeContext from "./ThemeContext"
 // export default Header
 
 
-export default function Header() {
-    return(
-        <ThemeContext.Consumer>
-            {((theme)=> {
-                return (
-                <header className={`${theme}-theme`}>
-                    <h2>{theme === "light" ? "Light" : "Dark"} Theme</h2>
-                </header>
-                )
-            })}
-        </ThemeContext.Consumer>
+// export default function Header() {
+//     return(
+//         <ThemeContext.Consumer>
+//             {((theme)=> {
+//                 return (
+//                 <header className={`${theme.value}-theme`}>
+//                     <h2>{theme.value === "light" ? "Light" : "Dark"} Theme</h2>
+//                 </header>
+//                 )
+//             })}
+//         </ThemeContext.Consumer>
        
-    )
-}
+//     )
+// }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -51,15 +51,15 @@ export default function Header() {
 // export default Header
 
 
-// export default function() {
-//     return (
-//         <UserContext.Consumer>
-//             {((username)=> (
-//                 <header>
-//                     <p>Welcome, {username}!</p>
-//                 </header>
-//             ))}
-//         </UserContext.Consumer>
+export default function() {
+    return (
+        <UserContext.Consumer>
+            {((context)=> (
+                <header>
+                    <p>Welcome, {context.username}!</p>
+                </header>
+            ))}
+        </UserContext.Consumer>
         
-//     )
-// }
+    )
+}
